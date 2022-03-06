@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;600&display=swap");
+
+form {
+  --color-error: rgb(245, 137, 137);
+  --color-warning: rgb(245, 202, 137);
+  --color-success: rgb(121, 196, 114);
+  --color-content-active: #5081a6;
+  --color-content-semi: #89b8dd;
+  --color-content-inactive: #cfe3f0;
+  color: #999;
+}
+
+* {
+  font-family: "Baloo Chettan 2", cursive;
+}
+
+body {
+  font-size: 18px;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(47, 73, 118);
+  background: linear-gradient(
+    191deg,
+    rgba(47, 73, 118, 1) 19%,
+    rgba(26, 30, 65, 1) 100%
+  );
+}
+
+.admin {
+  display: flex;
+}
+
+.admin > nav {
+  padding-right: 2rem;
+}
+
+.admin > main {
+  flex: 1;
+  border-left: solid 1px #ccc;
+  padding-left: 2rem;
+}
+
+em {
+  color: var(--color-error);
+  float: right;
+}
+
+form {
+  width: 500px;
+  padding: 1.5em;
+  margin: 100px auto;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(27, 37, 46, 0.5);
+}
+
+form input {
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-content-inactive);
+  background: #fbfbfb;
+  width: 100%;
+  font-size: 0.9em;
+  padding: 1em 1em;
+  outline: none;
+  transition: 0.2s;
+  color: var(--color-content-active);
+}
+
+form input:focus {
+  border: 1px solid var(--color-content-active);
+}
+
+form textarea {
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-content-inactive);
+  background: #fbfbfb;
+  width: 100%;
+  font-size: 0.9em;
+  padding: 1em 1em;
+  outline: none;
+  transition: 0.2s;
+  color: var(--color-content-active);
+  height: 100px;
+}
+
+form textarea:focus {
+  border: 1px solid var(--color-content-active);
+}
+
+button {
+  border: 0;
+  background: rgb(47, 73, 118);
+  background: linear-gradient(
+    180deg,
+    rgba(47, 73, 118, 1) -50%,
+    rgba(26, 30, 65, 1) 150%
+  );
+  padding: 1em;
+  margin-top: 1em;
+  width: 100%;
+  color: white;
+  font-size: 1em;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:not(:disabled):hover {
+  box-shadow: 0 0 10px rgba(47, 73, 118, 0.8);
+  background: linear-gradient(
+    180deg,
+    rgba(47, 73, 118, 1) 0%,
+    rgba(26, 30, 65, 1) 200%
+  );
+}
+
+button:active {
+  background: linear-gradient(
+    0deg,
+    rgba(47, 73, 118, 1) 0%,
+    rgba(26, 30, 65, 1) 200%
+  );
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+button:disabled {
+  background: rgb(209, 209, 209);
+  cursor: default;
+}
+
+label.success em {
+  color: var(--color-success);
+}
+
+label.warning em {
+  color: var(--color-warning);
+}
+
+label.error em {
+  color: var(--color-error);
+}
+
+label.success input,
+label.success textarea {
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
+}
+
+label.warning input,
+label.warning textarea {
+  border: 1px solid var(--color-warning);
+  color: var(--color-warning);
+}
+
+label.error input,
+label.error textarea {
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+}
